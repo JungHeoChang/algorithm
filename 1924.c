@@ -8,24 +8,22 @@ int main()
 	int result = 0;
 	scanf("%d %d", &Month, &Day);
 
-	for(i=1; i<=Month; i++)
+	for(i=1; i<Month; i++)
 	{
-		if(Month == 1)
-			Sum += Day-1;
-		else if(i == 1 || i== 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12)
+		if(i == 1 || i== 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12)
 			Sum += 31;
 		else if(i == 4 || i == 6 || i == 9 || i == 11)
 			Sum += 30;
 		else
 			Sum += 28;
 	}
-
+	Sum = Sum + Day-1;
 	result = Sum % 7;
 
 	switch (result)
 	{
 	case 0:
-		printf("Mon\n");
+		printf("MON\n");
 		break;
 	case 1:
 		printf("TUE\n");

@@ -19,6 +19,9 @@ int main()
 		else
 			Sum += 28;
 	}
+	if(Month!=1){
+		Sum +=Day;
+	}
 
 	result = Sum % 7;
 
